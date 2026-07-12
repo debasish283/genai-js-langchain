@@ -12,11 +12,11 @@ export async function createRetriever(): Promise<VectorStoreRetriever> {
   });
 
   const pinecone = new Pinecone();
-  const pineconeIndex = pinecone.Index("langchain-docs");
+  const pineconeIndex = pinecone.Index(process.env.PINECONE_INDEX as string);
 
   const vectorStore = await PineconeStore.fromExistingIndex(embeddingLLM, {
     pineconeIndex: pineconeIndex,
-    namespace: "langchain-docs",
+    namespace: process.env.PINECONE_NAMESPACE,
   });
 
   const retriever = vectorStore.asRetriever();
