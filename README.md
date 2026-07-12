@@ -123,37 +123,6 @@ npm start
 └── example.env                 # Blank template for env variables
 ```
 
----
-
-## 📤 Publishing to GitHub
-
-To upload this cleaned project to your own GitHub account, run the following commands:
-
-1. **Remove original Git remote configuration** (if cloned from tutorial):
-   ```bash
-   git remote remove origin
-   ```
-2. **Re-initialize Git (optional clean start)**:
-   ```bash
-   # Caution: This will remove git history of the course files
-   rm -rf .git
-   git init
-   git checkout -b main
-   ```
-3. **Stage and commit your files**:
-   ```bash
-   git add .
-   git commit -m "Initial commit: LangChain.js CLI Generative AI showcase app"
-   ```
-4. **Create a repository on GitHub**, then copy its URL and run:
-   ```bash
-   git remote add origin https://github.com/your-username/your-repo-name.git
-   git branch -M main
-   git push -u origin main
-   ```
-
----
-
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE). Feel free to modify and build upon it!
